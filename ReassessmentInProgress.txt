@@ -1,0 +1,6 @@
+MouseAndKeyboard.SendKeys.FocusAndSendKeys TextToSend: $'''{Escape}''' DelayBetweenKeystrokes: 10 SendTextAsHardwareKeys: True
+Web.InvokeWebService.InvokeWebService Url: $'''https://www.ftrcrm.com/tprest/v1/saveapproveddata''' Method: Web.Method.Post Accept: $'''application/json''' ContentType: $'''text/plain''' CustomHeaders: $'''auth-token: ab0b618d4613bf6ddb9f9c49bfd9f1a2''' RequestBody: $'''{
+    \"sin\": \"%JsonAsCustomObject['sin']%\",
+    \"opp_id\": \"%JsonAsCustomObject['opp_id']%\",
+    \"error\": \"RIP\"
+}''' ConnectionTimeout: 30 FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: False UserAgent: $'''Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6''' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False ResponseHeaders=> WebServiceResponseHeaders Response=> WebServiceResponse2 StatusCode=> StatusCode2
